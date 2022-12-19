@@ -1,0 +1,49 @@
+:root {
+    --main-color        : #779289;
+    --black-color       : #242424;
+    --gray-1-color      : #cccbd2;
+    --gray-2-color      : #b0afb6;
+    --transition        : all 0.3s ease 0s;
+    --base-color        : #dedede;
+    --shine-color       : #e8e8e8;
+    --animation-duration: 1.6s;
+    --avatar-offset     : 52 + 16;
+}
+
+.darkmode {
+    background-color: var(--black-color);
+}
+
+.darkmode .glow,
+.darkmode .glow2 {
+    opacity: 20% !important;
+}
+
+.darkmode * {
+    color  : var(--gray-1-color) !important;
+    opacity: 100% !important;
+}
+
+.darkmode * p {
+    color: var(--gray-2-color) !important;
+}
+
+button,
+.buttons button {
+    color     : var(--black-color) !important;
+    border    : 2px solid var(--gray-1-color);
+    box-shadow: none !important;
+}
+
+.darkmode {
+    border: 8px solid var(--gray-1-color) !important;
+}
+
+.darkmode #main {
+    border: none !important;
+}
+
+.darkmode #modeicon {
+    background-color: var(--gray-1-color) !important;
+    color           : var(--black-color) !important;
+}

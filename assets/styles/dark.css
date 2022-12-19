@@ -1,0 +1,49 @@
+:root {
+  --main-color: hsl(159, 11%, 52%);
+  --black-color: hsl(0, 0%, 14%);
+  --gray-1-color: hsl(249, 7%, 81%);
+  --gray-2-color: hsl(249, 5%, 70%);
+  --transition: all 0.3s ease 0s;
+  --base-color: hsl(0, 0%, 87%);
+  --shine-color: hsl(0, 0%, 91%);
+  --animation-duration: 1.6s;
+  --avatar-offset: 52 + 16;
+}
+
+.darkmode {
+  background-color: var(--black-color);
+}
+
+.darkmode .glow,
+.darkmode .glow2 {
+  opacity: 20% !important;
+}
+
+.darkmode * {
+  color: var(--gray-1-color) !important;
+  opacity: 100% !important;
+}
+
+.darkmode * p {
+  color: var(--gray-2-color) !important;
+}
+
+button,
+.buttons button {
+  color: var(--black-color) !important;
+  border: 2px solid var(--gray-1-color);
+  box-shadow: none !important;
+}
+
+.darkmode {
+  border: 8px solid var(--gray-1-color) !important;
+}
+
+.darkmode #main {
+  border: none !important;
+}
+
+.darkmode #modeicon {
+  background-color: var(--gray-1-color) !important;
+  color: var(--black-color) !important;
+}

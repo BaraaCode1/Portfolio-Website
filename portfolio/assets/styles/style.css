@@ -1,0 +1,322 @@
+:root {
+    --main-color        : #779289;
+    --black-color       : #242424;
+    --gray-1-color      : #cccbd2;
+    --gray-2-color      : #b0afb6;
+    --transition        : all 0.3s ease 0s;
+    --base-color        : #dddddd;
+    --shine-color       : #e8e8e8;
+    --animation-duration: 1.6s;
+    --avatar-offset     : 52 + 16;
+}
+
+body {
+    border: 8px solid var(--black-color);
+}
+
+::-moz-selection {
+    background-color: #deb887;
+    color           : #000;
+}
+
+::selection {
+    background-color: #deb887;
+    color           : #000;
+}
+
+body,
+#main {
+    background-color: #cccbd2;
+    font-family     : "Clash Display", sans-serif;
+    font-weight     : 500;
+    font-size       : 14px;
+}
+
+body {
+    display        : flex;
+    justify-content: center;
+    width          : 100%;
+    height         : 100%;
+}
+
+#main {
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    max-width       : 1000px;
+    width           : 100%;
+    height          : 100%;
+    min-height      : 100vh;
+    flex-direction  : column;
+    background-color: transparent !important;
+    padding         : 0 8px;
+    margin-right    : auto;
+    margin-left     : auto;
+}
+
+.glow {
+    height          : 30vw;
+    width           : 30vw;
+    position        : fixed;
+    left            : -10vw;
+    top             : -10vw;
+    border-radius   : 50%;
+    background-image: url(https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32bd39d6813eea1580849_Mesh%2015.jpg);
+    background-size : cover;
+    -webkit-filter  : blur(50px);
+    filter          : blur(50px);
+    opacity         : 70%;
+    z-index         : -1;
+}
+
+.glow2 {
+    height          : 30vw;
+    width           : 30vw;
+    position        : fixed;
+    right           : -10vw;
+    bottom          : -10vw;
+    border-radius   : 50%;
+    background-image: url(https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32bd39d6813eea1580849_Mesh%2015.jpg);
+    background-size : cover;
+    -webkit-filter  : blur(10px);
+    filter          : blur(10px);
+    opacity         : 70%;
+    z-index         : -1;
+}
+
+#mode {
+    position: fixed;
+    right   : 20px;
+    top     : 20px;
+}
+
+#mode img {
+    -o-object-fit: contain;
+    object-fit   : contain;
+    height       : 3rem;
+    width        : 3rem;
+    cursor       : pointer;
+    transition   : var(--transition);
+}
+
+#mode img:hover {
+    transform: scale(1.05);
+}
+
+img {
+    height       : 50px;
+    width        : 50px;
+    -o-object-fit: contain;
+    object-fit   : contain;
+}
+
+.name {
+    font-size     : 2rem;
+    color         : var(--black-color);
+    text-transform: capitalize;
+    opacity       : 90%;
+}
+
+.job {
+    font-size     : 1rem;
+    color         : var(--black-color);
+    text-transform: capitalize;
+    opacity       : 70%;
+}
+
+.about-me {
+    font-size  : 1rem;
+    color      : var(--black-color);
+    font-weight: 100;
+    line-height: 2rem;
+}
+
+.socail-links ul,
+.buttons {
+    display       : flex;
+    flex-direction: row;
+}
+
+.socail-links ul li a img {
+    transition: var(--transition);
+}
+
+.socail-links ul li a img:hover {
+    transform: scale(1.1);
+}
+
+.buttons {
+    display: flex;
+    gap    : 1rem;
+}
+
+section {
+    padding: 1rem 0;
+}
+
+.buttons button {
+    position        : relative;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    gap             : 1rem;
+    padding         : 1rem;
+    border          : none;
+    font-weight     : 500;
+    transition      : var(--transition) !important;
+    border-radius   : 2rem;
+    background-image: url(https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32bd39d6813eea1580849_Mesh%2015.jpg);
+    background-size : cover;
+    color           : var(--black-color);
+    transition      : var(--transition) !important;
+    border          : 2px solid var(--black-color);
+    box-shadow      : rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-transform  : capitalize;
+}
+
+.buttons button:hover {
+    transform : scale(1.05);
+    box-shadow: none;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+.loader {
+    --height-of-loader: 4px;
+    --loader-color    : #0071e2;
+    width             : 10%;
+    height            : var(--height-of-loader);
+    border-radius     : 30px;
+    position          : relative;
+}
+
+.loader::before {
+    content          : "";
+    position         : absolute;
+    background       : var(--loader-color);
+    top              : 0;
+    left             : 0;
+    width            : 0%;
+    height           : 100%;
+    border-radius    : 30px;
+    -webkit-animation: moving 1s ease-in-out infinite;
+    animation        : moving 1s ease-in-out infinite;
+}
+
+@-webkit-keyframes moving {
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+        right: 0;
+        left : unset;
+    }
+}
+
+@keyframes moving {
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+        right: 0;
+        left : unset;
+    }
+}
+
+#preloader {
+    height          : 100vh;
+    width           : 100vw;
+    background-color: var(--black-color);
+    position        : fixed;
+    top             : 0;
+    right           : 0;
+    bottom          : 0;
+    left            : 0;
+    margin          : auto;
+    z-index         : 9999;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : column;
+    color           : var(--gray-1-color);
+    font-weight     : 600;
+    gap             : 1rem;
+}
+
+#modeicon {
+    position           : fixed;
+    top                : 8vh;
+    right              : 20px;
+    background-color   : var(--black-color);
+    color              : var(--gray-1-color);
+    padding            : 1rem;
+    border-radius      : 2rem;
+    cursor             : pointer;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+    transition         : var(--transition);
+}
+
+@media screen and (max-width: 391px) {
+    #modeicon {
+        display: none;
+    }
+}
+
+#modeicon:hover {
+    transform: scale(1.05);
+}
+
+.socail-links ul {
+    display: flex;
+    gap    : 1rem;
+}
+
+@media screen and (max-width: 391px) {
+    #modeicon {
+        display: none;
+    }
+
+    #error-page {
+        display: flex !important;
+    }
+}
+
+#error-page {
+    height          : 100vh;
+    width           : 100vw;
+    background-color: var(--black-color);
+    color           : var(--gray-1-color);
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : column;
+    text-align      : center;
+    font-size       : 1rem;
+    position        : fixed;
+    top             : 0;
+    bottom          : 0;
+    right           : 0;
+    left            : 0;
+    margin          : auto;
+    z-index         : 999;
+    display         : none;
+}
+
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+    left            : 0px !important;
+    background-image: url(https://uploads-ssl.webflow.com/5ec207a448d573153616868a/60e32bd39d6813eea1580849_Mesh%2015.jpg) !important;
+    background-size : cover !important;
+    font-family     : "Clash Display", sans-serif !important;
+    border-radius   : 50px !important;
+    color           : var(--black-color) !important;
+}
